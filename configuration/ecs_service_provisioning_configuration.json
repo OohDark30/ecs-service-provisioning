@@ -1,0 +1,35 @@
+{
+  "BASE": {
+    "logging_level": "info",
+    "datastore": "sqllite",
+    "alert_delivery": "smtp"
+  },
+  "ECS_CONNECTION": [ {
+    "protocol": "https",
+    "host": "10.246.155.71",
+    "port": "4443",
+    "user": "root",
+    "password": "ChangeMe3",
+    "default_replication_group_id": "urn:storageos:ReplicationGroupInfo:e4020792-5615-4960-922a-57e8e25b227c:global"
+  }],
+  "SQLLITE_DATABASE_CONNECTION": {
+    "databasename": "ecsservicerequests"
+  },
+  "ECS_API_POLLING_INTERVALS": {
+    "process_service_requests()": "60"
+  },
+  "SMTP": {
+    "host": "smtp-outbound.ins.dell.com",
+	"port": "25",
+    "user": "<user>",
+    "password":  "<password>",
+    "authenticationrequired": "0",
+    "fromemail": "ecs-service-provisioning-admin@cae.io",
+    "toemail": "steve.beckwith@dell.com",
+    "polling_interval_seconds": "120"
+  },
+  "SLACK": {
+   "slack_environment_variable_for_webhook_url": "SLACK_WEBHOOK_URL",
+   "polling_interval_seconds": "120"
+  }
+}
